@@ -1,8 +1,13 @@
+using UnityEngine;
+
 namespace Game
 {
-    public class GameStateChanger
+    public enum DayType { Usual, NewYear }
+    public class GameStateChanger : MonoBehaviour
     {
         private GameState _currentGameState;
+
+        public static DayType dayType = DayType.Usual;
         public void ChangeState(GameState gameState)
         {
             _currentGameState?.Exit();

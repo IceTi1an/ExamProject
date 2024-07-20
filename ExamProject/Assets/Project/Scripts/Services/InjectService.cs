@@ -7,6 +7,8 @@ namespace Game
         public static void Inject(object obj)
         {
             ProjectContext.Instance.Container.Inject(obj);
+
+
         }
     }
 }

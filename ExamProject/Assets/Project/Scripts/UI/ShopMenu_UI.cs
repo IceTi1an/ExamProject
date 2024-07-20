@@ -1,13 +1,49 @@
+using SO;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Game.UI
 {
     public class ShopMenu_UI : UIBase
     {
-        [SerializeField] private Button _exitButton;
-        [SerializeField] private Transform _contentContainer;
-        [SerializeField] private BirdShop_Unit _birdShop_Unit;
-    }
+        public Button exitButton;
+        public Transform contentContainer;
+        public BirdShop_Unit birdShop_Unit;
 
+        [Inject] private BirdList birdList;
+
+        private void Awake()
+        {
+            InjectService.Inject(this);
+
+            ClearBirds();
+            SpawnBirds();
+        }
+
+        /*public CarData GetCurrentCar()
+        {
+            string carName = PlayerPrefs
+        }*/
+
+        private void ClearBirds()
+        {
+
+            foreach (var bird in contentContainer.GetComponentsInChildren<BirdShop_Unit>(true))
+            {
+                Destroy(bird.gameObject);
+            }
+        }
+
+        private void SpawnBirds()
+        {
+            foreach (var bird in birdList.birdsList)
+            {
+                var birdShopUnitPrefabCopy = Instantiate(birdShop_Unit, contentContainer);
+                birdShopUnitPrefabCopy.transform.parent = contentContainer;
+                birdShopUnitPrefabCopy.Setup(bird);
+            }
+        }
+    }
 }

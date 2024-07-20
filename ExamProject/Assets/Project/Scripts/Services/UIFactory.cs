@@ -9,7 +9,7 @@ namespace Game
 
         private void Start()
         {
-            /*GetUI<MainMenu_UI>();*/
+            GetUI<MainMenu_UI>();
         }
 
         public UIBase GetUI<_SomeUI>()

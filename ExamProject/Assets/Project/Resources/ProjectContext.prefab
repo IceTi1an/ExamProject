@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0948a6e218cf8345b047dd67d66cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allUIs: []
+  _allUIs:
+  - {fileID: 6718758614083303304, guid: e8062dbd2b9ca83498b40742b3a08f4c, type: 3}
+  - {fileID: -2877312611039277474, guid: 336a400fe90c10a4ca330f515b1f961c, type: 3}
+  - {fileID: 6425559142039804305, guid: b868e68ff2492d04a9eb597366f32e72, type: 3}
 --- !u!1 &7800702490669343423
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,3 +124,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiFactory: {fileID: 82903870287407859}
+  _birdsList: {fileID: 11400000, guid: a2bfad4db4cf4e649af907529192a3e6, type: 2}
+  _levelsList: {fileID: 11400000, guid: 43c72978854a6d1479645c15447d96d9, type: 2}
