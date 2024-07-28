@@ -24,8 +24,6 @@ namespace Game
 
         private LevelData _currentLevelData;
 
-        private bool activeSpawning = false;
-
         
         public override void Enter()
         {
@@ -36,26 +34,9 @@ namespace Game
                 UnityEngine.Object.Instantiate(_currentBirdData.prefab);
 
                 _currentLevelData = _levelSaveManager.GetCurrentLevel();
-
-                activeSpawning = true;
-
-                /*while(activeSpawning)
-                {
-                    await Task.Delay(2000);
-                    Spawn();
-                }   */             
+                UnityEngine.Object.Instantiate(_currentLevelData.prefab);
             };
         }
-
-        private void Spawn()
-        {
-           /* GameObject pipes = UnityEngine.Object.Instantiate(_pipes, Vector3.up * Random.Range(_minHeght, _maxHeght), Quaternion.identity);*/
-        }
-       
-        /*public override void Exit()
-        {
-            activeSpawning = false;
-        }*/
     }
 
 }
