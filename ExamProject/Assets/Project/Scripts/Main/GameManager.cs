@@ -5,20 +5,19 @@ namespace Game
 {
     public class GameManager : MonoBehaviour
     {
-        /*[SerializeField] private BirdMoveMent _bird;*/
-
         [SerializeField] private TextMeshProUGUI _scoreText;
 
         [SerializeField] private GameObject _playButton;
 
         [SerializeField] private GameObject _gameOver;
 
+        [SerializeField] private GameObject _exitButton;
+
         private int score;
 
         private void Awake()
         {
             Application.targetFrameRate = 60;
-            /*Instantiate(_bird);*/
 
             Pause();
         }
@@ -30,13 +29,13 @@ namespace Game
 
             _gameOver.SetActive(false);
             _playButton.SetActive(false);
+            _exitButton.SetActive(false);
 
             Time.timeScale = 1f;
-            /*_bird.enabled = true;*/
 
             Pipes[] pipes = FindObjectsOfType<Pipes>();
 
-            for (int i = 0; i < pipes.Length;i++)
+            for (int i = 0; i < pipes.Length; i++)
             {
                 Destroy(pipes[i].gameObject);
             }
@@ -52,6 +51,7 @@ namespace Game
         {
             _gameOver.SetActive(true);
             _playButton.SetActive(true);
+            _exitButton.SetActive(true);
 
             Pause();
         }

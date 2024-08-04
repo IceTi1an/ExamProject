@@ -1,14 +1,8 @@
 using Game.UI;
 using Interfaces;
 using SO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Unity.VisualScripting;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace Game
 {
@@ -20,11 +14,13 @@ namespace Game
 
         [Inject] public ILevelSaveManager _levelSaveManager;
 
+        private GamePlay_UI _gamePlay_UI;
+
         private BirdData _currentBirdData;
 
         private LevelData _currentLevelData;
 
-        
+
         public override void Enter()
         {
             InjectService.Inject(this);
@@ -35,7 +31,14 @@ namespace Game
 
                 _currentLevelData = _levelSaveManager.GetCurrentLevel();
                 UnityEngine.Object.Instantiate(_currentLevelData.prefab);
+
+                /*_gamePlay_UI = _uiFactory.GetUI<GamePlay_UI>() as GamePlay_UI;
+                _gamePlay_UI.exitButton.onClick.AddListener(Exit);*/
             };
+        }
+        private void Exit()
+        {
+            gameStateChanger.ChangeState(new MainMenu_State());
         }
     }
 
