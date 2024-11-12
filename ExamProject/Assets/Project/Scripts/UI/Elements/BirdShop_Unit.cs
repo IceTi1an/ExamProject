@@ -11,7 +11,7 @@ namespace Game.UI
     public class BirdShop_Unit : MonoBehaviour
     {
         [SerializeField] private GameObject _selectedState;
-        [SerializeField] private GameObject _lockedState;
+        /*[SerializeField] private GameObject _lockedState;*/
         [SerializeField] private TextMeshProUGUI _birdName;
         [SerializeField] private Button _selectButton;
         [SerializeField] private Image _birdIcon;
@@ -30,19 +30,19 @@ namespace Game.UI
         public void Setup(BirdData birdData)
         {
             _selectedState.SetActive(false);
-            _lockedState.SetActive(false);
+            /*_lockedState.SetActive(false);*/
 
             _birdData = birdData;
 
             _birdName.text = _birdData.name;
             _birdIcon.sprite = _birdData.icon;
 
-            CheckIsOpen();
+            /*CheckIsOpen();*/
 
             CheckSelected(_birdSaveManager.GetCurrentBird());
 
-            _birdData.onChanged -= CheckIsOpen;
-            _birdData.onChanged += CheckIsOpen;
+            /*_birdData.onChanged -= CheckIsOpen;
+            _birdData.onChanged += CheckIsOpen;*/
         }
 
         private void OnEnable()
@@ -56,7 +56,7 @@ namespace Game.UI
             _selectButton.onClick.RemoveListener(Select);
             _birdSaveManager.onBirdSelected -= CheckSelected;
 
-            _birdData.onChanged -= CheckIsOpen;
+            /*_birdData.onChanged -= CheckIsOpen;*/
         }
         private void Select()
         {
@@ -70,7 +70,7 @@ namespace Game.UI
             }
         }
 
-        private void CheckIsOpen()
+        /*private void CheckIsOpen()
         {
             if (_isBirdOpen == true)
             {
@@ -80,7 +80,7 @@ namespace Game.UI
             {
                 _lockedState.SetActive(true);
             }
-        }
+        }*/
 
         private void CheckSelected(BirdData birdData)
         {

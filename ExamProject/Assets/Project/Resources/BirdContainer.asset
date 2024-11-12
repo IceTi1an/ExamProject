@@ -29,8 +29,8 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: 32055b98241ee5d43a9bdc7b8b57544e, type: 3}
     prefab: {fileID: 3551597731683606643, guid: 999bdb37cff240d4d961ebc6c83d6239, type: 3}
   _currentBird:
-    name: green bird
-    isDefault: 0
+    name: usual bird
+    isDefault: 1
     isOpen: 0
-    icon: {fileID: 21300000, guid: 32055b98241ee5d43a9bdc7b8b57544e, type: 3}
-    prefab: {fileID: 3551597731683606643, guid: 999bdb37cff240d4d961ebc6c83d6239, type: 3}
+    icon: {fileID: 21300000, guid: 12c51da4aec55b54f8bbfbaf4d9d535d, type: 3}
+    prefab: {fileID: 3551597731683606643, guid: 3a4c69743e9ebca4a9b3f818cdb31168, type: 3}

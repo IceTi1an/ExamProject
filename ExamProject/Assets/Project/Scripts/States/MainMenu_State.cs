@@ -19,7 +19,7 @@ namespace Game
         public override void Enter()
         {
             InjectService.Inject(this);
-            SceneManager.LoadSceneAsync("MainMenu").completed += (_) =>
+            SceneManager.LoadSceneAsync("MainMenu").completed += async (_) =>
             {
                 _mainMenu_UI = _uiFactory.GetUI<MainMenu_UI>() as MainMenu_UI;
                 _shopMenu_UI = _uiFactory.GetUI<ShopMenu_UI>() as ShopMenu_UI;

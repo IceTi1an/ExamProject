@@ -45,7 +45,6 @@ namespace Game
         public void Pause()
         {
             Time.timeScale = 0;
-            /*_bird.enabled = false;*/
         }
         public void GameOver()
         {

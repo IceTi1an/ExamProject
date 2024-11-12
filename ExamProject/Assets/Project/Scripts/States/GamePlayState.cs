@@ -1,6 +1,8 @@
 using Game.UI;
 using Interfaces;
 using SO;
+using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
@@ -32,11 +34,20 @@ namespace Game
                 _currentLevelData = _levelSaveManager.GetCurrentLevel();
                 UnityEngine.Object.Instantiate(_currentLevelData.prefab);
 
-                /*_gamePlay_UI = _uiFactory.GetUI<GamePlay_UI>() as GamePlay_UI;
-                _gamePlay_UI.exitButton.onClick.AddListener(Exit);*/
+                _gamePlay_UI = _uiFactory.GetUI<GamePlay_UI>() as GamePlay_UI;
+                _gamePlay_UI.exitButton.onClick.AddListener(Exit);
             };
         }
-        private void Exit()
+
+        private void EnableMovementScript(GameObject obj)
+        {
+            var movementScript = obj.GetComponent<BirdMoveMent>();
+            if (movementScript != null)
+            {
+                movementScript.enabled = true;
+            }
+        }
+            private void Exit()
         {
             gameStateChanger.ChangeState(new MainMenu_State());
         }
