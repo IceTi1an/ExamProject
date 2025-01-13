@@ -20,17 +20,17 @@ MonoBehaviour:
     prefab: {fileID: 3551597731683606643, guid: 3a4c69743e9ebca4a9b3f818cdb31168, type: 3}
   - name: blue bird
     isDefault: 0
-    isOpen: 0
+    isOpen: 1
     icon: {fileID: 21300000, guid: 1ffb5ee9ddf91fa4ba9ba30b37f0d94d, type: 3}
     prefab: {fileID: 3551597731683606643, guid: bce20e4621d39fc49ab5208c81fd2a93, type: 3}
   - name: green bird
     isDefault: 0
-    isOpen: 0
+    isOpen: 1
     icon: {fileID: 21300000, guid: 32055b98241ee5d43a9bdc7b8b57544e, type: 3}
     prefab: {fileID: 3551597731683606643, guid: 999bdb37cff240d4d961ebc6c83d6239, type: 3}
   _currentBird:
-    name: usual bird
-    isDefault: 1
-    isOpen: 0
-    icon: {fileID: 21300000, guid: 12c51da4aec55b54f8bbfbaf4d9d535d, type: 3}
-    prefab: {fileID: 3551597731683606643, guid: 3a4c69743e9ebca4a9b3f818cdb31168, type: 3}
+    name: blue bird
+    isDefault: 0
+    isOpen: 1
+    icon: {fileID: 21300000, guid: 1ffb5ee9ddf91fa4ba9ba30b37f0d94d, type: 3}
+    prefab: {fileID: 3551597731683606643, guid: bce20e4621d39fc49ab5208c81fd2a93, type: 3}

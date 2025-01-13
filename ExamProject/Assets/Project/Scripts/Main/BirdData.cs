@@ -11,7 +11,6 @@ namespace SO
 
         public string name;
         public bool isDefault;
-        public bool isOpen;
         public Sprite icon;
         public BirdMoveMent prefab;
     }

@@ -1,10 +1,8 @@
 using Game;
 using Interfaces;
-using System.Collections.Generic;
 using System;
-using UnityEditor.U2D.Aseprite;
+using System.Collections.Generic;
 using UnityEngine;
-using Zenject;
 
 namespace SO
 {
@@ -21,7 +19,7 @@ namespace SO
             InjectService.Inject(this);
             foreach (BirdData bird in birdsList)
             {
-                bird.isOpen = PlayerPrefs.GetString(bird.name + "_opened") == true.ToString();
+                PlayerPrefs.GetString(bird.name) ;
             }
         }
 
@@ -50,15 +48,6 @@ namespace SO
             return _currentBird;
         }
 
-        public void OpenBird(BirdData bird)
-        {
-           /* _rewardedAd.ShowRewardedAd(() =>
-            {
-                car.isOpen = true;
-                PlayerPrefs.SetString(car.name + "_opened", true.ToString());
-                car.onChanged?.Invoke();
-            });*/
-        }
 
         public void SetCurrentBird(BirdData bird)
         {

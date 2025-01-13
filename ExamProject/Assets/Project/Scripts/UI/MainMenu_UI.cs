@@ -7,6 +7,7 @@ namespace Game.UI
         public Button playButton;
         public Button levelButton;
         public Button shopButton;
+        public Button exitButton;
     }
 
 }

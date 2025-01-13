@@ -30,6 +30,7 @@ namespace Game
                 _mainMenu_UI.playButton.onClick.AddListener(GoToGamePlay);
                 _mainMenu_UI.levelButton.onClick.AddListener(OpenLevels);
                 _mainMenu_UI.shopButton.onClick.AddListener(OpenShopMenu);
+                _mainMenu_UI.exitButton.onClick.AddListener(QuitGame);
 
                 _shopMenu_UI.exitButton.onClick.AddListener(OpenMainMenu);
 
@@ -57,6 +58,10 @@ namespace Game
             _mainMenu_UI.gameObject.SetActive(false);
             _shopMenu_UI.gameObject.SetActive(false);
             _levelMenu_UI.gameObject.SetActive(true);
+        }
+        private void QuitGame()
+        {
+            Application.Quit();
         }
     }
 

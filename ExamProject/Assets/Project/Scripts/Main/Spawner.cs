@@ -8,9 +8,9 @@ namespace Game
     {
         [SerializeField] private float _spawnRate = 1.0f;
 
-        [SerializeField] private float _minHeight = -0.5f;
+        [SerializeField] private float _minHeight = 1.2f;
 
-        [SerializeField] private float _maxHeight = 0.2f;
+        [SerializeField] private float _maxHeight = 3f;
 
         [SerializeField] private Pipes _pipes;
 

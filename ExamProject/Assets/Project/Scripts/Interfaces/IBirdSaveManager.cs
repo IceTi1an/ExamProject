@@ -10,7 +10,6 @@ namespace Interfaces
 
         public BirdData GetCurrentBird();
 
-        public void OpenBird(BirdData bird);
         public void SetCurrentBird(BirdData bird);
     }
 }
